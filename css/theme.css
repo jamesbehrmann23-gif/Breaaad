@@ -1,0 +1,32 @@
+/* 
+Theme override to change layout, colors, and overall styling for a 'Dark Theme'.
+*/
+
+body {
+    background-color: #1a1a1a;
+    color: #f0e68c;
+}
+
+header {
+    background: linear-gradient(135deg, #333, #666);
+}
+
+aside {
+    background-color: #2e2e2e;
+}
+
+main {
+    background-color: #2e2e2e;
+}
+
+.card {
+    background-color: #444;
+}
+
+footer {
+    background-color: #333;
+}
+
+a, a:hover {
+    color: #f0e68c;
+}
