@@ -1,0 +1,70 @@
+/*
+Theme override (restored):
+- Dark theme that substantially changes look & feel (dark bg, new accents, different font stack)
+- Moves navigation to the right by changing the container grid
+- Applies glass/darker card styles, new header gradient, altered link colors
+- Only overrides properties that differ from css/main.css
+*/
+body {
+    background: linear-gradient(180deg,#0f1226 0%, #1b2030 100%);
+    color: #e8e6e1;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #11131a, #2b2f3a);
+    color: #fff;
+}
+
+.container {
+    grid-template-columns: 1fr 220px; /* put main content first, aside second */
+}
+
+/* place aside into the second column explicitly */
+aside {
+    background-color: rgba(255,255,255,0.03);
+    grid-column: 2;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* main occupies first column */
+main {
+    background-color: rgba(255,255,255,0.02);
+    grid-column: 1;
+}
+
+/* darker glass-like cards */
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04);
+    color: #e6e4dd;
+}
+
+/* link colors and hover tweaks */
+a, a:hover {
+    color: #9ad3ff;
+}
+
+/* footer adjustments */
+footer {
+    background: linear-gradient(180deg,#131722,#11121a);
+    color: #bfc7d6;
+}
+
+/* subtle border for gallery images */
+.gallery-images img {
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* change theme animation intent */
+.animate { animation: fadeInUp 1s; }
+
+/* make toggle button fit dark theme if present */
+#theme-toggle {
+    background: #2b2f3a;
+    color: #dfe8f0;
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
