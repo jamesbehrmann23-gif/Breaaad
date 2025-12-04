@@ -1,9 +1,18 @@
 /*
-Theme override (restored):
+==========================================================
+THEME.CSS - Dark Theme Override
+==========================================================
+Author: James Behrmann
+Purpose: Provides a dark theme alternative for the Bread Delight website
+
+Changes in this iteration:
 - Dark theme that substantially changes look & feel (dark bg, new accents, different font stack)
 - Moves navigation to the right by changing the container grid
 - Applies glass/darker card styles, new header gradient, altered link colors
 - Only overrides properties that differ from css/main.css
+- Updated form styling to match dark theme (adjusted backgrounds and borders)
+- Maintains accessibility with adjusted contrast for dark backgrounds
+==========================================================
 */
 body {
     background: linear-gradient(180deg,#0f1226 0%, #1b2030 100%);
@@ -56,6 +65,44 @@ footer {
 /* subtle border for gallery images */
 .gallery-images img {
     border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Form styling for dark theme */
+.form-section {
+    border-color: rgba(154, 211, 255, 0.3);
+    background: linear-gradient(135deg, rgba(15, 18, 38, 0.5), rgba(43, 47, 58, 0.3));
+}
+
+.form-section legend {
+    color: #e8e6e1;
+}
+
+label {
+    color: #e8e6e1;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(154, 211, 255, 0.2);
+    color: #e8e6e1;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #9ad3ff;
+    box-shadow: 0 0 8px rgba(154, 211, 255, 0.2);
+}
+
+input.was-validated:valid,
+select.was-validated:valid,
+textarea.was-validated:valid {
+    background-color: rgba(40, 167, 69, 0.15);
+    border-color: #28a745;
 }
 
 /* change theme animation intent */
