@@ -29,7 +29,16 @@ function initPageNavigation() {
  */
 function showSection(sectionId) {
     const allSections = document.querySelectorAll('main > section');
-    
+    // Special-case: support a "log-visit" nav target that opens the visitor form
+    if (sectionId === 'log-visit') {
+        allSections.forEach(section => {
+            section.style.display = 'none';
+            section.classList.remove('animate');
+        });
+        showVisitorForm();
+        return;
+    }
+
     allSections.forEach(section => {
         if (section.id === sectionId) {
             section.style.display = 'block';

@@ -16,7 +16,8 @@ Changes in this iteration:
 */
 body {
     background: linear-gradient(180deg,#0f1226 0%, #1b2030 100%);
-    color: #e8e6e1;
+    /* Increased contrast for dark mode: use near-white for body text */
+    color: #ffffff;
     font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
@@ -47,8 +48,9 @@ main {
 /* darker glass-like cards */
 .card {
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border: 1px solid rgba(255,255,255,0.04);
-    color: #e6e4dd;
+    border: 1px solid rgba(255,255,255,0.06);
+    /* lighter card text for better contrast */
+    color: #f1f5f9;
 }
 
 /* link colors and hover tweaks */
@@ -59,7 +61,8 @@ a, a:hover {
 /* footer adjustments */
 footer {
     background: linear-gradient(180deg,#131722,#11121a);
-    color: #bfc7d6;
+    /* brighter footer text */
+    color: #dbe7f5;
 }
 
 /* subtle border for gallery images */
@@ -74,11 +77,11 @@ footer {
 }
 
 .form-section legend {
-    color: #e8e6e1;
+    color: #ffffff;
 }
 
 label {
-    color: #e8e6e1;
+    color: #ffffff;
 }
 
 input[type="text"],
@@ -103,6 +106,33 @@ select.was-validated:valid,
 textarea.was-validated:valid {
     background-color: rgba(40, 167, 69, 0.15);
     border-color: #28a745;
+}
+
+/* Validation styling (invalid) - improved contrast for dark theme */
+input.was-validated:invalid,
+select.was-validated:invalid,
+textarea.was-validated:invalid {
+    /* slightly brighter red tint with good contrast on dark backgrounds */
+    background-color: rgba(255, 107, 107, 0.12);
+    border-color: #ff6b6b;
+    color: #ffecec;
+}
+
+/* Error message color for dark theme */
+.errorMsg {
+    color: #ffb3b3;
+}
+
+/* Checkbox invalid styling */
+.checkbox-item input[type="checkbox"].was-validated {
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.08) inset;
+    outline: 2px solid rgba(255, 107, 107, 0.12);
+}
+
+/* Interests error text */
+#interests-error {
+    color: #ffb3b3;
+    display: block;
 }
 
 /* change theme animation intent */
